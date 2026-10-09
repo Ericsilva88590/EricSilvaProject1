@@ -7,6 +7,9 @@ namespace EricSilvaProject1
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem inventoryToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addCarToolStripMenuItem;
         private System.Windows.Forms.ListBox listBoxInventory;
         private System.Windows.Forms.Button buttonPurchase;
         private System.Windows.Forms.TextBox textBoxShopperName;

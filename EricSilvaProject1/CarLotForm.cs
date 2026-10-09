@@ -45,7 +45,7 @@ namespace EricSilvaProject1
             if (_shopper == null)
             {
                 labelShopperName.Text = "No shopper";
-                labelMoney.Text = "$0.00";
+                labelMoney.Text = (0m).ToString("C2");
                 listBoxOwned.Items.Clear();
                 return;
             }
@@ -62,7 +62,8 @@ namespace EricSilvaProject1
 
         private static string FormatCarDisplay(Car car)
         {
-            return $"{car.Make} {car.Model} - {car.Mpg:N2} MPG - {car.Price:C2}";
+            // Format: Make Model $Price MPGmpg (MPG one decimal, money currency)
+            return $"{car.Make} {car.Model} {car.Price:C2} {car.Mpg:F1}mpg";
         }
 
         private void buttonCreateShopper_Click(object? sender, EventArgs e)
@@ -113,7 +114,8 @@ namespace EricSilvaProject1
             }
 
             _shopper.PurchaseCar(purchased, total);
-            MessageBox.Show($"Purchase complete. Total: {total:C2}", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            // Show congrats message with car details and remaining money
+            MessageBox.Show($"Congratulations! You purchased {FormatCarDisplay(purchased)}.\nRemaining balance: {_shopper.MoneyAvailable:C2}", "Purchase Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             RefreshInventoryList();
             RefreshShopperInfo();
