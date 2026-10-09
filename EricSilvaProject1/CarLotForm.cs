@@ -20,6 +20,17 @@ namespace EricSilvaProject1
             RefreshInventoryList();
         }
 
+        private void addCarToolStripMenuItem_Click(object? sender, EventArgs e)
+        {
+            using var dlg = new AddCarForm();
+            if (dlg.ShowDialog(this) == DialogResult.OK && dlg.NewCar != null)
+            {
+                _carLot.AddCar(dlg.NewCar.Make, dlg.NewCar.Model, dlg.NewCar.Mpg, dlg.NewCar.Price);
+                RefreshInventoryList();
+                MessageBox.Show("Car added to inventory.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
         private void RefreshInventoryList()
         {
             listBoxInventory.Items.Clear();
@@ -56,23 +67,15 @@ namespace EricSilvaProject1
 
         private void buttonCreateShopper_Click(object? sender, EventArgs e)
         {
-            try
+            using var dlg = new ShopperDialog();
+            if (dlg.ShowDialog(this) == DialogResult.OK && dlg.Shopper != null)
             {
-                var name = textBoxShopperName.Text.Trim();
-                if (string.IsNullOrWhiteSpace(name))
-                {
-                    MessageBox.Show("Please enter a shopper name.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
-                var money = numericUpDownMoney.Value;
-                _shopper = new Shopper(name, money);
+                _shopper = dlg.Shopper;
+                // populate optional fields
+                textBoxShopperName.Text = _shopper.Name;
+                numericUpDownMoney.Value = _shopper.MoneyAvailable;
                 RefreshShopperInfo();
                 MessageBox.Show("Shopper created.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

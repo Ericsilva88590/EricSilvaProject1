@@ -40,6 +40,9 @@ namespace EricSilvaProject1
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.inventoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addCarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listBoxInventory = new System.Windows.Forms.ListBox();
             this.buttonPurchase = new System.Windows.Forms.Button();
             this.textBoxShopperName = new System.Windows.Forms.TextBox();
@@ -55,9 +58,34 @@ namespace EricSilvaProject1
             // 
             // listBoxInventory
             // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.inventoryToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(784, 24);
+            this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // inventoryToolStripMenuItem
+            // 
+            this.inventoryToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addCarToolStripMenuItem});
+            this.inventoryToolStripMenuItem.Name = "inventoryToolStripMenuItem";
+            this.inventoryToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
+            this.inventoryToolStripMenuItem.Text = "Inventory";
+            // 
+            // addCarToolStripMenuItem
+            // 
+            this.addCarToolStripMenuItem.Name = "addCarToolStripMenuItem";
+            this.addCarToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.addCarToolStripMenuItem.Text = "Add Car...";
+            this.addCarToolStripMenuItem.Click += new System.EventHandler(this.addCarToolStripMenuItem_Click);
+            // 
+            // listBoxInventory
+            // 
             this.listBoxInventory.FormattingEnabled = true;
             this.listBoxInventory.ItemHeight = 15;
-            this.listBoxInventory.Location = new System.Drawing.Point(12, 12);
+            this.listBoxInventory.Location = new System.Drawing.Point(12, 36);
             this.listBoxInventory.Name = "listBoxInventory";
             this.listBoxInventory.Size = new System.Drawing.Size(460, 199);
             this.listBoxInventory.TabIndex = 0;
@@ -151,6 +179,7 @@ namespace EricSilvaProject1
             // 
             this.ClientSize = new System.Drawing.Size(784, 261);
             this.Controls.Add(this.listBoxOwned);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.labelMoney);
             this.Controls.Add(this.labelMoneyLabel);
             this.Controls.Add(this.labelShopperName);
