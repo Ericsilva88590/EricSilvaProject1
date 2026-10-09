@@ -120,5 +120,11 @@ namespace EricSilvaProject1
             RefreshInventoryList();
             RefreshShopperInfo();
         }
+
+        private void buttonViewDetails_Click(object? sender, EventArgs e)
+        {
+            using var dlg = new DetailedInventoryForm(_carLot);
+            dlg.ShowDialog(this);
+        }
     }
 }

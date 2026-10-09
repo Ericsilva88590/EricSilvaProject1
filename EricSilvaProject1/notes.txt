@@ -1,0 +1,10 @@
+Known issues / notes:
+
+- Basic validation is implemented for dialogs, but additional UI input sanitization may be needed.
+- No persistence: inventory and shopper data are lost when the application closes. Consider adding file-based save/load or a database.
+- Concurrency: the app is single-user and not thread-safe; not intended for concurrent access.
+- UI improvements: consider replacing ListBox with DataGridView for better column alignment and sorting.
+- No unit tests included yet.
+- Price and MPG rounding is handled in model constructors; edge cases not exhaustively tested.
+
+If no further issues are discovered, treat this as a prototype.

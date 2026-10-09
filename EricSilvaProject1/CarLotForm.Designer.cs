@@ -12,6 +12,7 @@ namespace EricSilvaProject1
         private System.Windows.Forms.ToolStripMenuItem addCarToolStripMenuItem;
         private System.Windows.Forms.ListBox listBoxInventory;
         private System.Windows.Forms.Button buttonPurchase;
+        private System.Windows.Forms.Button buttonViewDetails;
         private System.Windows.Forms.TextBox textBoxShopperName;
         private System.Windows.Forms.NumericUpDown numericUpDownMoney;
         private System.Windows.Forms.Button buttonCreateShopper;
@@ -102,6 +103,16 @@ namespace EricSilvaProject1
             this.buttonPurchase.Text = "Purchase Selected";
             this.buttonPurchase.UseVisualStyleBackColor = true;
             this.buttonPurchase.Click += new System.EventHandler(this.buttonPurchase_Click);
+            // 
+            // buttonViewDetails
+            // 
+            this.buttonViewDetails.Location = new System.Drawing.Point(150, 217);
+            this.buttonViewDetails.Name = "buttonViewDetails";
+            this.buttonViewDetails.Size = new System.Drawing.Size(120, 30);
+            this.buttonViewDetails.TabIndex = 10;
+            this.buttonViewDetails.Text = "View Details";
+            this.buttonViewDetails.UseVisualStyleBackColor = true;
+            this.buttonViewDetails.Click += new System.EventHandler(this.buttonViewDetails_Click);
             // 
             // textBoxShopperName
             // 
