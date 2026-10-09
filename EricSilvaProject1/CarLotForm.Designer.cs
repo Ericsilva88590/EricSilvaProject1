@@ -66,9 +66,11 @@ namespace EricSilvaProject1
             this.inventoryToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Top;
             this.menuStrip1.Size = new System.Drawing.Size(784, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            this.MainMenuStrip = this.menuStrip1;
             // 
             // inventoryToolStripMenuItem
             // 
@@ -93,6 +95,9 @@ namespace EricSilvaProject1
             this.listBoxInventory.Name = "listBoxInventory";
             this.listBoxInventory.Size = new System.Drawing.Size(460, 199);
             this.listBoxInventory.TabIndex = 0;
+            this.listBoxInventory.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
             // 
             // buttonPurchase
             // 
@@ -103,6 +108,7 @@ namespace EricSilvaProject1
             this.buttonPurchase.Text = "Purchase Selected";
             this.buttonPurchase.UseVisualStyleBackColor = true;
             this.buttonPurchase.Click += new System.EventHandler(this.buttonPurchase_Click);
+            this.buttonPurchase.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left;
             // 
             // buttonViewDetails
             // 
@@ -115,18 +121,20 @@ namespace EricSilvaProject1
             this.buttonViewDetails.Text = "View Details";
             this.buttonViewDetails.UseVisualStyleBackColor = true;
             this.buttonViewDetails.Click += new System.EventHandler(this.buttonViewDetails_Click);
+            this.buttonViewDetails.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left;
             // 
             // textBoxShopperName
             // 
-            this.textBoxShopperName.Location = new System.Drawing.Point(500, 12);
+            this.textBoxShopperName.Location = new System.Drawing.Point(500, 36);
             this.textBoxShopperName.Name = "textBoxShopperName";
             this.textBoxShopperName.Size = new System.Drawing.Size(200, 23);
             this.textBoxShopperName.TabIndex = 2;
+            this.textBoxShopperName.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             // 
             // numericUpDownMoney
             // 
             this.numericUpDownMoney.DecimalPlaces = 2;
-            this.numericUpDownMoney.Location = new System.Drawing.Point(500, 41);
+            this.numericUpDownMoney.Location = new System.Drawing.Point(500, 65);
             this.numericUpDownMoney.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -135,16 +143,18 @@ namespace EricSilvaProject1
             this.numericUpDownMoney.Name = "numericUpDownMoney";
             this.numericUpDownMoney.Size = new System.Drawing.Size(200, 23);
             this.numericUpDownMoney.TabIndex = 3;
+            this.numericUpDownMoney.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             // 
             // buttonCreateShopper
             // 
-            this.buttonCreateShopper.Location = new System.Drawing.Point(500, 70);
+            this.buttonCreateShopper.Location = new System.Drawing.Point(500, 94);
             this.buttonCreateShopper.Name = "buttonCreateShopper";
             this.buttonCreateShopper.Size = new System.Drawing.Size(200, 30);
             this.buttonCreateShopper.TabIndex = 4;
             this.buttonCreateShopper.Text = "Create Shopper";
             this.buttonCreateShopper.UseVisualStyleBackColor = true;
             this.buttonCreateShopper.Click += new System.EventHandler(this.buttonCreateShopper_Click);
+            this.buttonCreateShopper.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
             // 
             // labelShopperNameLabel
             // 
@@ -190,11 +200,13 @@ namespace EricSilvaProject1
             this.listBoxOwned.Name = "listBoxOwned";
             this.listBoxOwned.Size = new System.Drawing.Size(268, 94);
             this.listBoxOwned.TabIndex = 9;
+            this.listBoxOwned.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right | System.Windows.Forms.AnchorStyles.Bottom;
             // 
             // CarLotForm
             // 
-            this.ClientSize = new System.Drawing.Size(784, 261);
+            this.ClientSize = new System.Drawing.Size(900, 400);
             this.Controls.Add(this.listBoxOwned);
+            this.Controls.Add(this.buttonViewDetails);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.labelMoney);
             this.Controls.Add(this.labelMoneyLabel);
@@ -205,8 +217,9 @@ namespace EricSilvaProject1
             this.Controls.Add(this.textBoxShopperName);
             this.Controls.Add(this.buttonPurchase);
             this.Controls.Add(this.listBoxInventory);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.MaximizeBox = false;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
+            this.MaximizeBox = true;
+            this.MinimumSize = new System.Drawing.Size(600, 300);
             this.Name = "CarLotForm";
             this.Text = "Car Lot";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMoney)).EndInit();
