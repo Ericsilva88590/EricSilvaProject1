@@ -60,6 +60,8 @@ namespace EricSilvaProject1
             }
         }
 
+        // Shopper abbreviation feature removed; only full name is displayed.
+
         private static string FormatCarDisplay(Car car)
         {
             // Format: Make Model $Price MPGmpg (MPG one decimal, money currency)

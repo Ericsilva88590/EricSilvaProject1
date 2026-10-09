@@ -124,7 +124,7 @@ namespace EricSilvaProject1
             // 
             // textBoxShopperName
             // 
-            this.textBoxShopperName.Location = new System.Drawing.Point(12, 6);
+            this.textBoxShopperName.Location = new System.Drawing.Point(80, 6);
             this.textBoxShopperName.Name = "textBoxShopperName";
             this.textBoxShopperName.Size = new System.Drawing.Size(200, 23);
             this.textBoxShopperName.TabIndex = 2;
@@ -133,7 +133,7 @@ namespace EricSilvaProject1
             // numericUpDownMoney
             // 
             this.numericUpDownMoney.DecimalPlaces = 2;
-            this.numericUpDownMoney.Location = new System.Drawing.Point(12, 35);
+            this.numericUpDownMoney.Location = new System.Drawing.Point(80, 36);
             this.numericUpDownMoney.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -146,7 +146,7 @@ namespace EricSilvaProject1
             // 
             // buttonCreateShopper
             // 
-            this.buttonCreateShopper.Location = new System.Drawing.Point(12, 64);
+            this.buttonCreateShopper.Location = new System.Drawing.Point(300, 6);
             this.buttonCreateShopper.Name = "buttonCreateShopper";
             this.buttonCreateShopper.Size = new System.Drawing.Size(200, 30);
             this.buttonCreateShopper.TabIndex = 4;
@@ -157,25 +157,27 @@ namespace EricSilvaProject1
             // labelShopperNameLabel
             // 
             this.labelShopperNameLabel.AutoSize = true;
-            this.labelShopperNameLabel.Location = new System.Drawing.Point(500, 110);
+            this.labelShopperNameLabel.Location = new System.Drawing.Point(12, 9);
             this.labelShopperNameLabel.Name = "labelShopperNameLabel";
-            this.labelShopperNameLabel.Size = new System.Drawing.Size(42, 15);
+            this.labelShopperNameLabel.Size = new System.Drawing.Size(38, 15);
             this.labelShopperNameLabel.TabIndex = 5;
-            this.labelShopperNameLabel.Text = "Shopper:";
+            this.labelShopperNameLabel.Text = "Name:";
             // 
             // labelShopperName
             // 
             this.labelShopperName.AutoSize = true;
-            this.labelShopperName.Location = new System.Drawing.Point(560, 110);
+            this.labelShopperName.Location = new System.Drawing.Point(12, 70);
             this.labelShopperName.Name = "labelShopperName";
-            this.labelShopperName.Size = new System.Drawing.Size(57, 15);
+            this.labelShopperName.Size = new System.Drawing.Size(75, 15);
             this.labelShopperName.TabIndex = 6;
-            this.labelShopperName.Text = "No shopper";
+            this.labelShopperName.Text = "Shopper: No shopper";
+            // 
+            // (shopper abbrev removed)
             // 
             // labelMoneyLabel
             // 
             this.labelMoneyLabel.AutoSize = true;
-            this.labelMoneyLabel.Location = new System.Drawing.Point(500, 130);
+            this.labelMoneyLabel.Location = new System.Drawing.Point(12, 90);
             this.labelMoneyLabel.Name = "labelMoneyLabel";
             this.labelMoneyLabel.Size = new System.Drawing.Size(41, 15);
             this.labelMoneyLabel.TabIndex = 7;
@@ -184,7 +186,7 @@ namespace EricSilvaProject1
             // labelMoney
             // 
             this.labelMoney.AutoSize = true;
-            this.labelMoney.Location = new System.Drawing.Point(560, 130);
+            this.labelMoney.Location = new System.Drawing.Point(80, 90);
             this.labelMoney.Name = "labelMoney";
             this.labelMoney.Size = new System.Drawing.Size(34, 15);
             this.labelMoney.TabIndex = 8;
