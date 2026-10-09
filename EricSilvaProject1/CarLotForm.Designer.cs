@@ -106,8 +106,10 @@ namespace EricSilvaProject1
             // 
             // buttonViewDetails
             // 
+            this.buttonViewDetails = new System.Windows.Forms.Button();
             this.buttonViewDetails.Location = new System.Drawing.Point(150, 217);
             this.buttonViewDetails.Name = "buttonViewDetails";
+
             this.buttonViewDetails.Size = new System.Drawing.Size(120, 30);
             this.buttonViewDetails.TabIndex = 10;
             this.buttonViewDetails.Text = "View Details";
